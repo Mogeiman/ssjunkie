@@ -76,7 +76,7 @@ const Hero:React.FC<ChapterCountProps>=({
                   group of people gifted with supernatural powers. Transported
                   into a ruined magical world, he found himself facing against
                   terrible monsters - and other Awakened - in a deadly battle of
-                  survival.What's worse, the divine power he received happened
+                  survival.What is worse, the divine power he received happened
                   to possess a small, but potentially fatal side effect...
                 </p>
               </div>

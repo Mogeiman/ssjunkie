@@ -23,7 +23,7 @@ export default function Footer() {
       Why?
     </h1>
     <p className="w-full text-xs md:text-base text-slate-100 font-light">
-      This is a project built, run and financed by me alone. I made it so that SS fans who can't get access to the privilege chapters, to read it on here.cough Definitely not me before cough. Please consider supporting and contributing anyway you can. I will keep solely financing it until my pockets run dry.
+      This is a project built, run and financed by me alone. I made it so that SS fans who can not get access to the privilege chapters, to read it on here.cough Definitely not me before cough. Please consider supporting and contributing anyway you can. I will keep solely financing it until my pockets run dry.
     </p>  
   </div>
   <div className="col-span-3 row-span-1 flex items-start justify-center md:justify-end">
