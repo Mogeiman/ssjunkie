@@ -4,9 +4,9 @@ import { MdNavigateNext, MdNavigateBefore } from "react-icons/md";
 import { BiHome } from "react-icons/bi";
 interface ChapterTextProps {
   data: chaps;
-  disabled: boolean;
+
 }
-const ChapterText: React.FC<ChapterTextProps> = ({ data, disabled }) => {
+const ChapterText: React.FC<ChapterTextProps> = ({ data }) => {
   const newName = data?.name?.replace(/-/g, " ");
 
   return (
