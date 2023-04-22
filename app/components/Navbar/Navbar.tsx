@@ -30,7 +30,7 @@ const Navbar = () => {
 
         <ul className="hidden md:flex lg:flex items-center justify-center  capitalize landscape:hidden landscape:md:flex">
           <li className="ml-8 text-blue-950 cursor-pointer hover:scale  hover:text-blue-700 ">
-            <Link href="/home">
+            <Link href="/">
               <h3>home</h3>
             </Link>
           </li>
