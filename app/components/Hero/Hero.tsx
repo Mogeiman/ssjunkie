@@ -42,7 +42,7 @@ const Hero = () => {
                       src="/images/book-white.svg"
                       className="ml-1 fill-white stroke-white mr-2"
                     />
-                    <span className="text-lg text-cyan-300">{chapters && chapters.length}</span>
+                    <span className="text-lg text-cyan-300">{chapters && chapters.length + 1}</span>
                   </div>
                 </div>
                 <div className="">
