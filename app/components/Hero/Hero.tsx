@@ -1,12 +1,13 @@
+'use client';
+import { useEffect, useState } from "react";
 import Image from "next/image";
+import { setChapters } from "@/app/redux/Feature/countChapter/chapterSlice";
+import { useSelector } from "react-redux";
+import { RootState } from "@/app/redux/store";
+const Hero = () => {
+  const chapters = useSelector((state: RootState) => state?.chapter?.data);
 
-interface ChapterCountProps {
-  chapterCount: number
-}
 
-const Hero:React.FC<ChapterCountProps>=({
-  chapterCount
-}) => {
   return (
     <section className="w-full h-screen md:h-[600px]  bg-slate-700 z-10">
       <div className="grid items-center w-full h-full ">
@@ -41,7 +42,7 @@ const Hero:React.FC<ChapterCountProps>=({
                       src="/images/book-white.svg"
                       className="ml-1 fill-white stroke-white mr-2"
                     />
-                    <span className="text-lg text-cyan-300">{chapterCount}</span>
+                    <span className="text-lg text-cyan-300">{chapters && chapters.length}</span>
                   </div>
                 </div>
                 <div className="">
@@ -52,6 +53,11 @@ const Hero:React.FC<ChapterCountProps>=({
                     <div className="flex items-center justify-center w-16 h-8 md:w-20 md:h-8  bg-indigo-600 rounded-xl">
                       <h3 className="text-base font-medium capitalize text-slate-50">
                         Fantasy
+                      </h3>
+                    </div>
+                    <div className="flex items-center justify-center w-16 h-8 md:w-20 md:h-8  bg-indigo-600 rounded-xl">
+                      <h3 className="text-base font-medium capitalize text-slate-50">
+                        Action
                       </h3>
                     </div>
                     <div className="flex items-center justify-center w-16 h-8 md:w-20 md:h-8  bg-indigo-600 rounded-xl">

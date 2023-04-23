@@ -1,21 +1,22 @@
 import { Inter } from 'next/font/google'
-import Hero from './components/Hero/Hero'
 import Summary from './components/Summary'
-import ChapterList from './components/Tablechapter'
+import Hero from './components/Hero/Hero'
+import Tablechapter from './components/TableChapter/Tablechapter'
+
 const inter = Inter({ subsets: ['latin'] })
-import getChapters from "./actions/getChapters";
+// import getChapters from "./actions/getChapters";
+const Home = async() => {
+  // const chapters = await getChapters()
 
-export default async function Home() {
-  const chapters = await getChapters()
+  // var count = chapters?.length + 1
 
-  var count = chapters?.length + 1
   return (
     <main className='mx-auto h-auto '>
-      <Hero chapterCount={count}/>
+      <Hero />
       <Summary />
-          <ChapterList
-            data={chapters}
-          />
+      <Tablechapter />
       </main>
   )
 }
+
+export default Home
