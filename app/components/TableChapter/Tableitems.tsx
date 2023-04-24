@@ -35,7 +35,7 @@ const TableItems:React.FC<TableItemsProps> = ({
       };
   
       fetchChapters();
-    }, [,page]);
+    }, [dispatch,page]);
   
     if (isLoading) {
         return (
