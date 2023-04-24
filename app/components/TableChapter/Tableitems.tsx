@@ -25,7 +25,7 @@ const TableItems:React.FC<TableItemsProps> = ({
       const fetchChapters = async () => {
         try {
           dispatch(setLoading());
-          const response = await fetch(`https://ssjunkie-nitfnb4fj-mogeiman.vercel.app/api/chapters/${page}`, { cache: 'no-store' });
+          const response = await fetch(`https://ssjunkie.vercel.app/api/chapters/${page}`, { cache: 'no-store' });
           const {total, chapters} = await response.json();
           dispatch(setTotal(total))
           dispatch(setChapters(chapters));
