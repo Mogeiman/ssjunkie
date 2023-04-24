@@ -1,11 +1,20 @@
-import { useEffect } from "react";
+import { useEffect,SetStateAction,Dispatch } from "react";
 import Link from "next/link";
 import { useDispatch, useSelector } from "react-redux";
 import { MdNewReleases } from "react-icons/md";
 // import { fetchChapters } from "@/app/redux/Feature/countChapter/chapterSlice";
 import { RootState } from "@/app/redux/store";
-import { setChapters, setLoading, setError } from "@/app/redux/Feature/countChapter/chapterSlice";
-const TableItems = () => {
+import { setChapters, setLoading, setError, setTotal } from "@/app/redux/Feature/countChapter/chapterSlice";
+import getChapters from "@/app/actions/getChapters";
+
+interface TableItemsProps {
+  page: number,
+  // setPage:  Dispatch<SetStateAction<number>>
+}
+
+const TableItems:React.FC<TableItemsProps> = ({
+  page
+}) => {
     const dispatch = useDispatch();
   
     const chapters = useSelector((state: RootState) => state?.chapter?.data);
@@ -16,17 +25,17 @@ const TableItems = () => {
       const fetchChapters = async () => {
         try {
           dispatch(setLoading());
-          const response = await fetch('https://ssjunkie.vercel.app/api/chapters', { cache: 'no-store' });
-          const chapters = await response.json();
+          const response = await fetch(`http://localhost:3000/api/chapters/${page}`, { cache: 'no-store' });
+          const {total, chapters} = await response.json();
+          dispatch(setTotal(total))
           dispatch(setChapters(chapters));
-          console.log('dispatched')
         } catch (error: any) {
           dispatch(setError(error.toString()));
         }
       };
   
       fetchChapters();
-    }, []);
+    }, [,page]);
   
     if (isLoading) {
         return (

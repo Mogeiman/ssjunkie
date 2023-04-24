@@ -9,7 +9,7 @@ export async function generateMetadata({
 }) {
   const {id} = params
   const chapter = await getChapter(id)
-  const description = chapter?.text.slice(0, 3).join(' ')
+  const description = chapter?.text.slice(0, 6).join(' ')
   const title = chapter?.name?.replace(/-/g, ' ')
   return {
     title,

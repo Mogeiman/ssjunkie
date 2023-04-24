@@ -9,12 +9,14 @@ import { Chapter } from '../../../types';
 
 interface ChaptersState {
   data: Chapter[];
+  total: number,
   isLoading: boolean;
   error: string | null;
 }
 
 const initialState: ChaptersState = {
   data: [],
+  total: 0,
   isLoading: false,
   error: null,
 };
@@ -35,10 +37,13 @@ const chaptersSlice = createSlice({
       state.isLoading = false;
       state.error = null;
     },
+    setTotal: (state, action: PayloadAction<number>) => {
+      state.total = action.payload
+    }
   },
 });
 
-export const { setLoading, setError, setChapters } = chaptersSlice.actions;
+export const { setLoading, setError, setChapters, setTotal } = chaptersSlice.actions;
 
 export default chaptersSlice.reducer;
 

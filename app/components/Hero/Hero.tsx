@@ -1,11 +1,10 @@
 'use client';
 import { useEffect, useState } from "react";
 import Image from "next/image";
-import { setChapters } from "@/app/redux/Feature/countChapter/chapterSlice";
 import { useSelector } from "react-redux";
 import { RootState } from "@/app/redux/store";
 const Hero = () => {
-  const chapters = useSelector((state: RootState) => state?.chapter?.data);
+  const total = useSelector((state: RootState) => state?.chapter?.total);
 
 
   return (
@@ -42,7 +41,7 @@ const Hero = () => {
                       src="/images/book-white.svg"
                       className="ml-1 fill-white stroke-white mr-2"
                     />
-                    <span className="text-lg text-cyan-300">{chapters && chapters.length + 1}</span>
+                    <span className="text-lg text-cyan-300">{total + 1}</span>
                   </div>
                 </div>
                 <div className="">
