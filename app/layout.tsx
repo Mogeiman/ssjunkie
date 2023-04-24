@@ -8,8 +8,11 @@ import Navbar from './components/Navbar/Navbar'
 import Footer from './components/Footer'
 import Providers from './redux/provider'
 export const metadata = {
-  title: 'Dhadow Slave Junkie',
-  description: 'Read the latest chapter of shadow slave',
+  title: 'Shadow Slave Junkie',
+  description: `Read the latest chapter of shadow slave. Author: Guilty three. Summary: Growing up in poverty, Sunny never expected anything good from
+  life. However, even he did not anticipate being chosen by the
+  Nightmare Spell and becoming one of the Awakened - an elite
+  group of people gifted with supernatural powers.`,
 }
 
 export default function RootLayout({
