@@ -1,4 +1,9 @@
 import './globals.css'
+import
+ { Analytics } 
+from
+ 
+'@vercel/analytics/react'
 import Navbar from './components/Navbar/Navbar'
 import Footer from './components/Footer'
 import Providers from './redux/provider'
@@ -17,11 +22,13 @@ export default function RootLayout({
       <head>
       <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9086453152549847"
      crossOrigin="anonymous"></script>
+     
       </head>
       <body className='bg-slate-200 overflow-x-hidden'>
       <Providers>
         <Navbar />
         {children}
+        <Analytics />
       <Footer />
       </Providers>
       
