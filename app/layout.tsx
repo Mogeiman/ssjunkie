@@ -26,6 +26,9 @@ export default function RootLayout({
       <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9086453152549847"
      crossOrigin="anonymous"></script>
      <meta name="monetag" content="33430c2f7ca6ffa352c78a7e56a83a3b"></meta>
+     <script data-cfasync="false" type="text/javascript" src='./adScript.js'>
+
+     </script>
      
       </head>
       <body className='bg-slate-200 overflow-x-hidden'>
