@@ -1,3 +1,4 @@
+'use client';
 import { useEffect,SetStateAction,Dispatch } from "react";
 import Link from "next/link";
 import { useDispatch, useSelector } from "react-redux";
@@ -5,7 +6,6 @@ import { MdNewReleases } from "react-icons/md";
 // import { fetchChapters } from "@/app/redux/Feature/countChapter/chapterSlice";
 import { RootState } from "@/app/redux/store";
 import { setChapters, setLoading, setError, setTotal } from "@/app/redux/Feature/countChapter/chapterSlice";
-import getChapters from "@/app/actions/getChapters";
 
 interface TableItemsProps {
   page: number,
@@ -69,8 +69,8 @@ const TableItems:React.FC<TableItemsProps> = ({
         const formattedDate = date.toLocaleDateString("en-US");
         const newName = chapter?.name?.replace(/-/g, " ");
 
-        const isNewRelease =
-          Date.now() - Date.parse(date.toString()) < 24 * 60 * 60 * 1000;
+        const isNewRelease = true
+          // Date.now() - Date.parse(date.toString()) < 24 * 60 * 60 * 1000;
 
         return (
           <li
