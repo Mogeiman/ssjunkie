@@ -1,7 +1,7 @@
 import { MetadataRoute } from 'next';
 import { useSelector } from 'react-redux';
 import { RootState } from './redux/store';
-export default function sitemap(): MetadataRoute.Sitemap {
+export default function Sitemap(): MetadataRoute.Sitemap {
     const chapters = useSelector((state: RootState) => state?.chapter?.data);
 
     const sitemapUrls = chapters?.map((chapter) => ({

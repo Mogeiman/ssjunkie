@@ -1,5 +1,5 @@
 'use client';
-import { useEffect,SetStateAction,Dispatch } from "react";
+import { useEffect } from "react";
 import Link from "next/link";
 import { useDispatch, useSelector } from "react-redux";
 import { MdNewReleases } from "react-icons/md";
@@ -35,7 +35,7 @@ const TableItems:React.FC<TableItemsProps> = ({
       };
   
       fetchChapters();
-    }, [,page]);
+    }, [dispatch, page]);
   
     if (isLoading) {
         return (
