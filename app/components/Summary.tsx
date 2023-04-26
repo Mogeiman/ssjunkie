@@ -1,6 +1,6 @@
 import Image from 'next/image'
 
-export default function Summary() {
+const Summary=()=> {
   return (
     <div className='w-full h-16 my-3 landscape:w-full '>
         <div className="w-full md:w-11/12 px:3 md:mx-auto md:px-12">
@@ -19,3 +19,5 @@ export default function Summary() {
     </div>
   )
 }
+
+export default Summary;

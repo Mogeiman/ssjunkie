@@ -1,7 +1,7 @@
 import { NextResponse, NextRequest } from 'next/server';
 import prisma from '../../../libs/prismadb';
 
-export async function GET(request: Request, {params}: any) {
+const GET = async(request: Request, {params}: any) => {
   try {
     const {page}  = params;
     const pageSize = 40;
@@ -33,3 +33,5 @@ export async function GET(request: Request, {params}: any) {
     return NextResponse.json({ error: 'Unable to fetch chapters' });
   }
 }
+
+export default GET;

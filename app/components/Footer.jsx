@@ -1,7 +1,7 @@
 import Link from "next/link"
 import Image from "next/image"
 import {SiBuymeacoffee} from "react-icons/si"
-export default function Footer() {
+const  Footer = () => {
   return (
     <footer className=" bg-slate-700 p-4 h-52 relative bottom-0 drop-shadow-xl w-full z-50 m-0" >
 <div className="w-full relative md:w-5/6 h-full grid grid-cols-3 grid-rows-3 md:flex-row md:flex justify-evenly md:items-center mx-auto gap-10">
@@ -37,3 +37,4 @@ export default function Footer() {
     </footer>
   )
 }
+export default Footer;

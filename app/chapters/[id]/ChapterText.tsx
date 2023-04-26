@@ -2,10 +2,13 @@ import { chaps } from "@prisma/client";
 import Link from "next/link";
 import { MdNavigateNext, MdNavigateBefore } from "react-icons/md";
 import { BiHome } from "react-icons/bi";
-interface ChapterTextProps {
-  data: chaps;
 
+
+interface ChapterTextProps {
+  data: chaps
 }
+
+
 const ChapterText: React.FC<ChapterTextProps> = ({ data }) => {
   const newName = data?.name?.replace(/-/g, " ");
 
