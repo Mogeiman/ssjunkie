@@ -3,7 +3,6 @@ import { useState } from "react";
 import TableItems from "./Tableitems";
 import { useSelector } from "react-redux";
 import { RootState } from "@/app/redux/store";
-import Link from "next/link";
 
 const Tablechapter = () => {
   const [page, setPage] = useState(1)

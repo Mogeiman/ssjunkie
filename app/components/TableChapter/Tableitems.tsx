@@ -25,8 +25,9 @@ const TableItems:React.FC<TableItemsProps> = ({
       const fetchChapters = async () => {
         try {
           dispatch(setLoading());
-          const response = await fetch(`/api/chapters/${page}`, { cache: 'no-store' });
+          const response = await fetch(`http://localhost:3000/api/chapters/${page}`, { cache: 'no-store' });
           const {total, chapters} = await response.json();
+          console.log('total',total, 'chapters',chapters)
           dispatch(setTotal(total))
           dispatch(setChapters(chapters));
         } catch (error: any) {
@@ -35,7 +36,7 @@ const TableItems:React.FC<TableItemsProps> = ({
       };
   
       fetchChapters();
-    }, [dispatch, page]);
+    }, [page]);
   
     if (isLoading) {
         return (
@@ -69,8 +70,8 @@ const TableItems:React.FC<TableItemsProps> = ({
         const formattedDate = date.toLocaleDateString("en-US");
         const newName = chapter?.name?.replace(/-/g, " ");
 
-        const isNewRelease = true
-          // Date.now() - Date.parse(date.toString()) < 24 * 60 * 60 * 1000;
+        const isNewRelease = 
+          Date.now() - Date.parse(date.toString()) < 24 * 60 * 60 * 1000;
 
         return (
           <li

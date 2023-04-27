@@ -12,11 +12,11 @@ export const metadata = {
   description: 'Read the latest chapter of shadow slave',
 }
 
-const RootLayout = ({
+export default function RootLayout({
   children,
 }: {
   children: React.ReactNode
-}) => {
+}){
   return (
     <html lang="en">
       <head>
@@ -39,4 +39,3 @@ const RootLayout = ({
   )
 }
 
-export default RootLayout;

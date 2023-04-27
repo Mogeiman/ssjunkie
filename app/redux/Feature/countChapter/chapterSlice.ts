@@ -1,7 +1,6 @@
 'use client';
 
 // src/features/chapters/chaptersSlice.ts
-import { useEffect } from 'react';
 import { AnyAction, createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { AppThunk } from '../../store';
 import { Chapter } from '../../../types';

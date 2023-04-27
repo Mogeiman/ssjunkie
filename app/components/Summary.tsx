@@ -2,7 +2,7 @@
 
 import Image from 'next/image'
 
-const Summary=()=> {
+const Summary = () => {
   return (
     <div className='w-full h-16 my-3 landscape:w-full '>
         <div className="w-full md:w-11/12 px:3 md:mx-auto md:px-12">

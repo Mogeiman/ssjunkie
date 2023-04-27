@@ -5,14 +5,16 @@ export const metadata = {
   description: 'Shadow Slave',
 }
 
-export default function RootLayout({
+const RootLayout=({
   children,
 }: {
   children: React.ReactNode
-}) {
+}) =>{
   return (
       <div className='bg-slate-200'>
         {children}
     </div>
   )
 }
+
+export default RootLayout;
